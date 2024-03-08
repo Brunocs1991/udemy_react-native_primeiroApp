@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Image, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import Jobs from './components/Jobs.tsx';
 
-class Inicial extends Component {
+class App extends Component {
   render() {
     let nome = 'Bruno';
 
@@ -20,4 +20,4 @@ class Inicial extends Component {
   }
 }
 
-export default Inicial;
+export default App;
