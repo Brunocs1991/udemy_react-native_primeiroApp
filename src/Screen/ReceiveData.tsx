@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {Alert, Button, StyleSheet, Text, TextInput, View} from 'react-native';
 
 type TypePropsReceiveData = {};
 type TypeStateReceiveData = {
   nome: string;
+  input: string;
 };
 
 class ReceiveData extends Component<
@@ -14,16 +15,17 @@ class ReceiveData extends Component<
     super(props);
     this.state = {
       nome: '',
+      input: '',
     };
-    this.pegaNome = this.pegaNome.bind(this);
+    this.entrar = this.entrar.bind(this);
   }
 
-  pegaNome(nome: string) {
-    if (nome.length > 0) {
-      this.setState({nome: `Bem vindo: ${nome}`});
-    } else {
-      this.setState({nome: ''});
+  entrar() {
+    if (this.state.input === '') {
+      Alert.alert('Importante', 'Digite seu nome!');
+      return;
     }
+    this.setState({nome: `Bem vindo: ${this.state.input}`});
   }
   render() {
     return (
@@ -33,8 +35,9 @@ class ReceiveData extends Component<
           placeholder="Digile seu nome?"
           placeholderTextColor="#FFF"
           underlineColorAndroid={'transparent'}
-          onChangeText={this.pegaNome}
+          onChangeText={input => this.setState({input: input})}
         />
+        <Button title={'Entrar'} onPress={this.entrar} />
         <Text style={styles.texto}>{this.state.nome}</Text>
       </View>
     );
