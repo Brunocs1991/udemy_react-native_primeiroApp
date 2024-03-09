@@ -18,20 +18,25 @@ class FlexLayout extends Component<TypeFlexLayoutProps, TypeFlexLayoutState> {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#222',
     flex: 1,
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
   },
   area1: {
-    height: 65,
-    // backgroundColor: '#ff0000',
+    height: 50,
+    width: 50,
+    backgroundColor: '#00FF00',
   },
   area2: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
+    height: 50,
+    width: 50,
+    backgroundColor: '#ff0000',
   },
   area3: {
-    height: 65,
-    // backgroundColor: '#ffff00',
+    height: 50,
+    width: 50,
+    backgroundColor: '#ffff00',
   },
 });
 export default FlexLayout;
