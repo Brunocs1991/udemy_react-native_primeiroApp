@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-import Inicial from './Screen/Inicial.tsx';
-import State from './Screen/State.tsx';
-import GrupoStyle from './Screen/GrupoStyle.tsx';
-import {SafeAreaView} from 'react-native';
-import FlexLayout from './Screen/FlexLayout.tsx';
+import ReceiveData from './Screen/ReceiveData.tsx';
 
 class App extends Component {
   render() {
@@ -12,7 +8,8 @@ class App extends Component {
         {/*<Inicial />*/}
         {/*<State />*/}
         {/*<GrupoStyle />*/}
-        <FlexLayout />
+        {/*<FlexLayout />*/}
+        <ReceiveData />
       </>
     );
   }
